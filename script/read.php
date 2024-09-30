@@ -14,7 +14,7 @@ $notas = $conn->query("SELECT * FROM nota");
 </head>
 <body>
     <h1>Usuários</h1>
-    <table border="1">
+    <table border="2">
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -22,7 +22,7 @@ $notas = $conn->query("SELECT * FROM nota");
         </tr>
         <?php while ($row = $usuarios->fetch_assoc()): ?>
             <tr>
-                <td><?php echo $row['ID']; ?></td>
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email']; ?></td>
             </tr>
@@ -30,7 +30,7 @@ $notas = $conn->query("SELECT * FROM nota");
     </table>
 
     <h1>Notas</h1>
-    <table border="1">
+    <table border="2">
         <tr>
             <th>ID</th>
             <th>Título</th>
@@ -38,7 +38,7 @@ $notas = $conn->query("SELECT * FROM nota");
         </tr>
         <?php while ($row = $notas->fetch_assoc()): ?>
             <tr>
-                <td><?php echo $row['ID']; ?></td>
+                <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['titulo']; ?></td>
                 <td><?php echo $row['descricao']; ?></td>
             </tr>
