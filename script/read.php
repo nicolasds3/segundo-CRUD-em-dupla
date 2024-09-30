@@ -48,3 +48,5 @@ $notas = $conn->query("SELECT * FROM nota");
     <?php $conn->close(); ?>
 </body>
 </html>
+<br>
+<a href="create.php">Inserir novo registro.</a>
