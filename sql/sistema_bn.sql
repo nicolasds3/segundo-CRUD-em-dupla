@@ -13,3 +13,11 @@ create table nota (
 	descricao varchar (15000),
     titulo varchar (100)
 );
+
+create table referencia (
+	id int primary key auto_increment not null,
+	usuarios_id int not null,
+    notas_id int not null,
+    foreign key (usuarios_id) references usuario(id),
+    foreign key (notas_id) references nota(id)
+);
