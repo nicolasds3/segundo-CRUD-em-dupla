@@ -27,7 +27,7 @@ $notas = $conn->query("SELECT * FROM nota");
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td>
-                    <a href="update.php?id={$row['id]}">Editar</a>
+                    <a href="updateUser.php?id={$row['id]}">Editar</a>
                     <a href="delete.php">Excluir</a>
                 </td>
             </tr>
