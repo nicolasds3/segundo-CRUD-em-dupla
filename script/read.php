@@ -27,8 +27,8 @@ $notas = $conn->query("SELECT * FROM nota");
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email']; ?></td>
                 <td>
-                    <a href="updateUser.php?id={$row['id]}">Editar</a>
-                    <a href="delete.php">Excluir</a>
+                    <a href="update.php?id={$row['id]}">Editar</a>
+                    <a href="delete.php?id=<?php echo $row['id']; ?>&type=usuario">Excluir</a>
                 </td>
             </tr>
         <?php endwhile; ?>
@@ -49,7 +49,7 @@ $notas = $conn->query("SELECT * FROM nota");
                 <td><?php echo $row['descricao']; ?></td>
                 <td>
                     <a href="update.php?id={$row['id]}">Editar</a>
-                    <a href="delete.php">Excluir</a>
+                    <a href="delete.php?id=<?php echo $row['id']; ?>&type=nota">Excluir</a>
                 </td>
             </tr>
         <?php endwhile; ?>
