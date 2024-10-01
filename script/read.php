@@ -19,12 +19,17 @@ $notas = $conn->query("SELECT * FROM nota");
             <th>ID</th>
             <th>Nome</th>
             <th>Email</th>
+            <th>Ações</th>
         </tr>
         <?php while ($row = $usuarios->fetch_assoc()): ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['nome']; ?></td>
                 <td><?php echo $row['email']; ?></td>
+                <td>
+                    <a href="update.php?id={$row['id]}">Editar</a>
+                    <a href="delete.php">Excluir</a>
+                </td>
             </tr>
         <?php endwhile; ?>
     </table>
@@ -35,12 +40,17 @@ $notas = $conn->query("SELECT * FROM nota");
             <th>ID</th>
             <th>Título</th>
             <th>Descrição</th>
+            <th>Ações</th>
         </tr>
         <?php while ($row = $notas->fetch_assoc()): ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
                 <td><?php echo $row['titulo']; ?></td>
                 <td><?php echo $row['descricao']; ?></td>
+                <td>
+                    <a href="update.php?id={$row['id]}">Editar</a>
+                    <a href="delete.php">Excluir</a>
+                </td>
             </tr>
         <?php endwhile; ?>
     </table>
